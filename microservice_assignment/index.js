@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const routes = require("./routes/routes");
 const connectDB = require("./db");
 require("dotenv").config();
 
@@ -15,8 +16,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.status(200).send("Server sample response");
 });
-app.use("/api/v1/books", require("./routes/book"));
-app.use("/api/v1/users", require("./routes/user"));
+routes(app);
+// app.use("/api/v1/books", require("./routes/book"));
+// app.use("/api/v1/users", require("./routes/user"));
 
 app.listen(PORT, () => {
     console.log(`Server is running at ${PORT}`);
