@@ -1,85 +1,44 @@
 > ### Pre Requisites
-
 -   Docker
 
 > ### Sample ENV
 
 ```
-
-
-
 MONGO_URL=mongodb://mongo:27017/pratilipi_assig?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
-
-
-
 ```
 
 > ### To run the application
 
 ```
-
-
-
 > docker-compose up --build
-
-
-
 ```
 
 > Folder Structure
 
 ```
-
-
-
 └── microservice_assignment
-
 │ .env
-
 │ docker-compose.yml
-
 │ Dockerfile
-
 │ index.js
-
 │ package-lock.json
-
 │ package.json
-
 │ README.md
-
 │
-
 ├───db
-
 │ index.js
-
 │
-
 ├───middleware
-
 │ auth.js
-
 │
-
 ├───models
-
 │ book-content.js
-
 │ user.js
-
 │
-
 ├───routes
-
 │ book.js
-
 │ user.js
-
 └───uploads
-
-
-
 ```
 
 > ### Assumptions
