@@ -11,6 +11,10 @@ var book = {
         }
     },
     create: async (req, res, next) => {
+        const { first_name, last_name, phone } = req.body;
+        if (!first_name || !last_name || !phone) {
+            return res.status(400).json({ errors: errors.array() });
+        }
         console.log(req);
         res.send("yes");
     },
