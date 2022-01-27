@@ -1,9 +1,23 @@
 version: "3"
 services:
-  # web:
-  #   build: .
-  #   ports:
-  #     - "8080:8080"
+  user:
+    build:
+      context: ./
+      dockerfile: ./User/Dockerfile
+    # ports:
+    #   - "8080:8080"
+  book:
+    build:
+      context: ./
+      dockerfile: ./Book/Dockerfile
+    # ports:
+    #   - "8080:8080"
+  activity:
+    build:
+      context: ./
+      dockerfile: ./Activity/Dockerfile
+    # ports:
+    #   - "8080:8080"
   mongo:
     image: mongo
     ports:
