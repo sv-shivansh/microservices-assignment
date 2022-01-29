@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { check, validationResult } = require("express-validator");
-const User = require("../models/user");
-const middleware = require("../middleware/auth");
+const User = require("../models/user-model");
+const middleware = require("../auth");
 
 // @access Public
 // @route GET api/v1/users

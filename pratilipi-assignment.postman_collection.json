@@ -9,27 +9,34 @@
 			"name": "Books",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/v1/books/csv-upload",
+					"name": "http://localhost:5000/api/v1/books/csv-upload",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "file",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/C:/Users/dell/Downloads/bookContent - Sheet1.csv"
+									"src": "/C:/PERSONAL/Pratilipi/bookContent - Sheet1.csv"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books/csv-upload",
+							"raw": "http://localhost:5000/api/v1/books/csv-upload",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -41,7 +48,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books",
+					"name": "http://localhost:5000/api/v1/books",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -61,12 +68,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books",
+							"raw": "http://localhost:5000/api/v1/books",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -77,7 +84,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books",
+					"name": "http://localhost:5000/api/v1/books",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -100,12 +107,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books",
+							"raw": "http://localhost:5000/api/v1/books",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -116,83 +123,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/read/61e696f8329f8e09252f6989",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "user",
-								"value": "61e69b856ff1fde8f471e611",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Title 1\",\r\n    \"story\": \"STORY 1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/books/read/61e696f8329f8e09252f6989",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"books",
-								"read",
-								"61e696f8329f8e09252f6989"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/v1/books/like/61e696f8329f8e09252f698a",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "user",
-								"value": "61e69b856ff1fde8f471e611",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Title 1\",\r\n    \"story\": \"STORY 1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/books/like/61e696f8329f8e09252f698a",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"books",
-								"like",
-								"61e696f8329f8e09252f698a"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/api/v1/books/top",
+					"name": "http://localhost:5000/api/v1/books/top",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -215,12 +146,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books/top",
+							"raw": "http://localhost:5000/api/v1/books/top",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -232,7 +163,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/new",
+					"name": "http://localhost:5000/api/v1/books/new",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -255,12 +186,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books/new",
+							"raw": "http://localhost:5000/api/v1/books/new",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -272,7 +203,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/find/61e6a0633343b21c7ac876b4",
+					"name": "http://localhost:5000/api/v1/books/find/61e6a0633343b21c7ac876b4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -295,12 +226,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books/find/61e6a0633343b21c7ac876b4",
+							"raw": "http://localhost:5000/api/v1/books/find/61e6a0633343b21c7ac876b4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
@@ -313,7 +244,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/61e6a0633343b21c7ac876b4",
+					"name": "http://localhost:5000/api/v1/books/61e6a0633343b21c7ac876b4",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -350,7 +281,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/61e6a0633343b21c7ac876b4",
+					"name": "http://localhost:5000/api/v1/books/61e6a0633343b21c7ac876b4",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -370,17 +301,17 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/books/61e6a0633343b21c7ac876b4",
+							"raw": "http://localhost:5000/api/v1/books/61f4ed278b9f49d8850efa20",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "5000",
 							"path": [
 								"api",
 								"v1",
 								"books",
-								"61e6a0633343b21c7ac876b4"
+								"61f4ed278b9f49d8850efa20"
 							]
 						}
 					},
@@ -392,7 +323,7 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "http://localhost:8080/api/v1/users",
+					"name": "http://localhost:3000/api/v1/users",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -406,12 +337,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users",
+							"raw": "http://localhost:3000/api/v1/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -422,7 +353,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/users/61e69b856ff1fde8f471e611",
+					"name": "http://localhost:3000/api/v1/users/61e69b856ff1fde8f471e611",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -442,12 +373,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users/61e69b856ff1fde8f471e611",
+							"raw": "http://localhost:3000/api/v1/users/61e69b856ff1fde8f471e611",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -459,7 +390,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/users",
+					"name": "http://localhost:3000/api/v1/users",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -482,12 +413,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users",
+							"raw": "http://localhost:3000/api/v1/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -498,7 +429,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/api/v1/books/61e6a0633343b21c7ac876b4",
+					"name": "http://localhost:3000/api/v1/books/61e6a0633343b21c7ac876b4",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -518,17 +449,98 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users/61e69b856ff1fde8f471e611",
+							"raw": "http://localhost:3000/api/v1/users/61e69b856ff1fde8f471e611",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"v1",
 								"users",
 								"61e69b856ff1fde8f471e611"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "http://localhost:8000/api/v1/activity/read/61e696f8329f8e09252f6989",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user",
+								"value": "61e69b856ff1fde8f471e611",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Title 1\",\r\n    \"story\": \"STORY 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/activity/read/61e696f8329f8e09252f6989",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"activity",
+								"read",
+								"61e696f8329f8e09252f6989"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8000/api/v1/activity/like/61e696f8329f8e09252f698a",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user",
+								"value": "61e69b856ff1fde8f471e611",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Title 1\",\r\n    \"story\": \"STORY 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/activity/like/61e696f8329f8e09252f698a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"activity",
+								"like",
+								"61e696f8329f8e09252f698a"
 							]
 						}
 					},

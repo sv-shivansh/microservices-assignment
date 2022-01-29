@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
-const routes = require("./routes/routes");
 const connectDB = require("./db");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.BOOK_PORT || 5000;
 // connecting databse
 connectDB();
 
@@ -14,12 +13,11 @@ app.use("/uploads", express.static("uploads"));
 
 app.use(express.json());
 app.get("/", (req, res) => {
-    res.status(200).send("Server sample response");
+    res.status(200).send("Book sample service response");
 });
-routes(app);
-// app.use("/api/v1/books", require("./routes/book"));
-// app.use("/api/v1/users", require("./routes/user"));
+
+app.use("/api/v1/books", require("./routes/book"));
 
 app.listen(PORT, () => {
-    console.log(`Server is running at ${PORT}`);
+    console.log(`Book Service Server is running at ${PORT}`);
 });
