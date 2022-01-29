@@ -4,20 +4,20 @@ services:
     build:
       context: ./
       dockerfile: ./User/Dockerfile
-    # ports:
-    #   - "8080:8080"
+    ports:
+      - "3000:3000"
   book:
     build:
       context: ./
       dockerfile: ./Book/Dockerfile
-    # ports:
-    #   - "8080:8080"
+    ports:
+      - "5000:5000"
   activity:
     build:
       context: ./
       dockerfile: ./Activity/Dockerfile
-    # ports:
-    #   - "8080:8080"
+    ports:
+      - "8000:8000"
   mongo:
     image: mongo
     ports:

@@ -3,7 +3,7 @@ const app = express();
 const connectDB = require("./db");
 require("dotenv").config();
 
-const PORT = process.env.BOOK_PORT || 8080;
+const PORT = process.env.BOOK_PORT || 5000;
 // connecting databse
 connectDB();
 

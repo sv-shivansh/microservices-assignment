@@ -11,5 +11,5 @@ COPY ./User/models/user-model.js ./models/user-model.js
 COPY ./utility/db.js ./db.js
 COPY ./utility/auth.js ./auth.js
 #Expose port and start application
-EXPOSE 8080
+EXPOSE 5000
 CMD [ "npm", "start" ]

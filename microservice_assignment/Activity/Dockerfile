@@ -13,5 +13,5 @@ COPY ./utility/db.js ./db.js
 COPY ./utility/auth.js ./auth.js
 
 #Expose port and start application
-EXPOSE 8080
+EXPOSE 8000
 CMD [ "npm", "start" ]
