@@ -106,3 +106,6 @@ ACTIVITY_PORT=8000
 > **Similarly You will be needed to change the id's in few of the requests where it fetches data by id.**
 
 > ![image](https://user-images.githubusercontent.com/56015329/150004239-de9f5063-2eb5-4df5-8280-cf7cb8c05438.png)
+
+> ## Architechure
+> ![Pratilipi](https://user-images.githubusercontent.com/56015329/151653205-9f852d2b-f2e7-4261-966f-b87aadae417e.png)
