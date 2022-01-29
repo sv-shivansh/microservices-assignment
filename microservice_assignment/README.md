@@ -1,10 +1,30 @@
 > ### Pre Requisites
+
 -   Docker
 
 > ### Sample ENV
+>
+> ENV's are different for each service as they are sunning on different containers
+
+> User Service:
 
 ```
 MONGO_URL=mongodb://mongo:27017/pratilipi_assig?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+USER_PORT=3000
+```
+
+> Book Service:
+
+```
+MONGO_URL=mongodb://mongo:27017/pratilipi_assig?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+BOOK_PORT=5000
+```
+
+> Activity Service:
+
+```
+MONGO_URL=mongodb://mongo:27017/pratilipi_assig?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+ACTIVITY_PORT=8000
 ```
 
 > ### To run the application
@@ -17,28 +37,50 @@ MONGO_URL=mongodb://mongo:27017/pratilipi_assig?readPreference=primary&appname=M
 
 ```
 └── microservice_assignment
-│ .env
-│ docker-compose.yml
-│ Dockerfile
-│ index.js
-│ package-lock.json
-│ package.json
-│ README.md
+│   .gitignore
+│   docker-compose.yml
+│   README.md
 │
-├───db
-│ index.js
+├───Activity
+│   │   .env
+│   │   Activity.js
+│   │   Dockerfile
+│   │   package-lock.json
+│   │   package.json
+│   │
+│   └───routes
+│           activity.js
 │
-├───middleware
-│ auth.js
+├───Book
+│   │   .env
+│   │   Book.js
+│   │   Dockerfile
+│   │   package-lock.json
+│   │   package.json
+│   │
+│   ├───models
+│   │       book-content.js
+│   │
+│   ├───routes
+│   │       book.js
+│   │
+│   └───uploads
+├───User
+│   │   .env
+│   │   Dockerfile
+│   │   package-lock.json
+│   │   package.json
+│   │   User.js
+│   │
+│   ├───models
+│   │       user-model.js
+│   │
+│   └───routes
+│           user.js
 │
-├───models
-│ book-content.js
-│ user.js
-│
-├───routes
-│ book.js
-│ user.js
-└───uploads
+└───utility
+        auth.js
+        db.js
 ```
 
 > ### Assumptions
